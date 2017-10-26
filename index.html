@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+	*{
+		margin: 0px;
+		height: 0px;
+	}
+	td{
+		padding: 30px 100px;
+	}
+
+	</style>
+</head>
+<body>
+<table border="1px"></table>
+</body>
+</html>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+<script>
+$(function(){
+	var list=[];
+
+	$.ajax({
+		url:"http://localhost:3000",
+		type:'POST',
+		data:{},
+		success:function(e){
+			
+			for(var i=0;i<e.length;i++){
+				list.push(data[i])
+
+				$('body').append('<h1><span>'+e[1].id+'</h1></span>')
+			}
+			
+
+		}
+	})
+})
+</script>
